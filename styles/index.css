@@ -3,6 +3,12 @@ body {
     color: white;
 
     font-family: Arial, sans-serif;
+    font-size: 16pt;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 a {
@@ -10,11 +16,52 @@ a {
     text-decoration: none;
 }
 
-#freelancer-teams {
-    list-style-type: none;
+#freelancer-teams h3 {
+    margin: 0;
 }
 
-#freelancer-teams a {
+#freelancer-teams-list {
+    list-style-type: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#freelancer-teams-list li {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 10px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#freelancer-teams-list li:hover {
+    animation-name: blink;
+    animation-duration: 500ms;
+}
+
+@keyframes blink {
+
+    50% {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+#freelancer-teams-list a {
     color: #97c4ff;
     text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#freelancer-teams-list img {
+    width: 100%;
 }
